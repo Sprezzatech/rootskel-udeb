@@ -1,4 +1,4 @@
-rootskel (1.94) unstable; urgency=low
+rootskel (1.94) UNRELEASED; urgency=low
 
   [ Samuel Thibault ]
   * S40term-hurd: Enable UTF-8 on the plain Mach console too.
