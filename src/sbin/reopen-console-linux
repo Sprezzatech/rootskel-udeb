@@ -14,9 +14,15 @@ if ! [ -f /var/run/console-device ]; then
 		console="$(dmesg -s 262143 |
 			sed -n -r -e 's/(.*\])? *console handover: boot \[.*\] -> real \[(.*)\]$/\2/p')"
 		;;
-	    *) # >=2.6.32
+	    2.6.3[234567]*)
 		console="$(dmesg -s 262143 |
 			sed -n -r -e 's/(.*\])? *console \[(.*)\] enabled, bootconsole disabled$/\2/p')"
+		;;
+	    *) # >= 2.6.38
+		console_major_minor="$(get-real-console-linux)"
+		console_raw="$(readlink "/sys/dev/char/${console_major_minor}")"
+		console="${console_raw##*/}"
+		;;
 	esac
 
 	# Except if it is the wrong type...

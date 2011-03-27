@@ -1,3 +1,11 @@
+rootskel (1.95) unstable; urgency=low
+
+  [ Jurij Smakov ]
+  * Switch to using TIOCGDEV ioctl for detection of the real console for
+    kernels >= 2.6.38.
+
+ -- Jurij Smakov <jurij@debian.org>  Sat, 09 Apr 2011 10:12:29 +0100
+
 rootskel (1.94) unstable; urgency=low
 
   [ Samuel Thibault ]

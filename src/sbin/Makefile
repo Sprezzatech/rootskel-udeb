@@ -13,22 +13,26 @@ files_exec = \
 
 ifeq ($(DEB_HOST_ARCH_OS),linux)
   files_exec += \
-	console-type
+	console-type \
+	get-real-console-linux
 endif
 
 console-type: console-type.c
 	gcc -Os -Wall console-type.c -o console-type
 
+get-real-console-linux:
+	gcc -Os -Wall get-real-console-linux.c -o get-real-console-linux
+
 steal-ctty: steal-ctty.c
 	gcc -Os -Wall steal-ctty.c -o steal-ctty
 
 ifeq ($(DEB_HOST_ARCH_OS),linux)
-build: console-type steal-ctty
+build: console-type get-real-console-linux steal-ctty
 else
 build: steal-ctty
 endif
 
 clean:
-	rm -f console-type steal-ctty
+	rm -f console-type get-real-console-linux steal-ctty
 
 include ../../Makefile.inc
