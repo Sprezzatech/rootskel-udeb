@@ -4,6 +4,10 @@ rootskel (1.94) UNRELEASED; urgency=low
   * src/lib/debian-installer/exit-hurd: pass -f to busybox to make it simply
     call reboot(), which DTRT.
 
+  [ Jurij Smakov ]
+  * Set DEB_HOST_ARCH_OS in src/Makefile to make sure that everything builds
+    correctly without help from dpkg-buildpackage.
+
  -- Samuel Thibault <sthibault@debian.org>  Sat, 19 Mar 2011 20:21:40 +0100
 
 rootskel (1.93) unstable; urgency=low

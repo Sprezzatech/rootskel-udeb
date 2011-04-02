@@ -1,3 +1,5 @@
+DEB_HOST_ARCH_OS ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_OS 2>/dev/null)
+
 dir =
 
 subdirs = \
