@@ -1,4 +1,4 @@
-rootskel (1.94) UNRELEASED; urgency=low
+rootskel (1.94) unstable; urgency=low
 
   [ Samuel Thibault ]
   * src/lib/debian-installer/exit-hurd: pass -f to busybox to make it simply
@@ -13,7 +13,7 @@ rootskel (1.94) UNRELEASED; urgency=low
     buffer from 64KiB to 256KiB.  This fixes console detection on (at least)
     VMware Workstation (LP: #745947).
 
- -- Samuel Thibault <sthibault@debian.org>  Sat, 19 Mar 2011 20:21:40 +0100
+ -- Colin Watson <cjwatson@debian.org>  Thu, 07 Apr 2011 22:37:55 +0100
 
 rootskel (1.93) unstable; urgency=low
 
