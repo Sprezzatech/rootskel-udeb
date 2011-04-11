@@ -14,8 +14,13 @@ check_gtk () {
 		return 0
 	fi
 
-	if [ -z "$TERM_FRAMEBUFFER" ] ; then
+	OS="$(udpkg --print-os)"
+	if [ "$OS" = linux -a -z "$TERM_FRAMEBUFFER" ] ; then
 		echo "Framebuffer not available; disabling graphical frontend" >&2
+		return 1
+	fi
+	if [ "$OS" = hurd -a "$TERM" != hurd ] ; then
+		echo "Hurd console not started; disabling graphical frontend" >&2
 		return 1
 	fi
 	if [ "$GTK_NOVESA" ]; then
