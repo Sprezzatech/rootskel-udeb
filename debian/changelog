@@ -4,7 +4,14 @@ rootskel (1.96) UNRELEASED; urgency=low
   * Do not require TERM_FRAMEBUFFER to be set for g-i on !linux-any.
   * Require TERM to be set to hurd for g-i on hurd-any.
 
- -- Samuel Thibault <sthibault@debian.org>  Mon, 11 Apr 2011 20:56:58 +0200
+  [ Hector Oron ]
+  * src/lib/debian-installer-startup.d/Makefile:
+    - enabled init scripts for armhf:    
+       S40framebuffer-module-linux-armel
+        S80anna-install-armel
+        S99signal-status  
+
+ -- Hector Oron <zumbi@debian.org>  Thu, 21 Apr 2011 14:12:35 +0100
 
 rootskel (1.95) unstable; urgency=low
 
