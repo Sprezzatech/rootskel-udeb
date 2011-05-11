@@ -1,8 +1,9 @@
-rootskel (1.96) UNRELEASED; urgency=low
+rootskel (1.96~0) UNRELEASED; urgency=low
 
   [ Samuel Thibault ]
   * Do not require TERM_FRAMEBUFFER to be set for g-i on !linux-any.
   * Require TERM to be set to hurd for g-i on hurd-any.
+  * Add audio group for proper ALSA behavior.
 
   [ Hector Oron ]
   * src/lib/debian-installer-startup.d/Makefile:
