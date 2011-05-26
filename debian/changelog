@@ -1,4 +1,4 @@
-rootskel (1.96~0) UNRELEASED; urgency=low
+rootskel (1.96) unstable; urgency=low
 
   [ Samuel Thibault ]
   * Do not require TERM_FRAMEBUFFER to be set for g-i on !linux-any.
@@ -16,7 +16,7 @@ rootskel (1.96~0) UNRELEASED; urgency=low
   * Set up /run on Linux, otherwise udev complains at boot.
   * Create /run/lock after mounting /run, for later convenience.
 
- -- Hector Oron <zumbi@debian.org>  Thu, 21 Apr 2011 14:12:35 +0100
+ -- Colin Watson <cjwatson@debian.org>  Thu, 26 May 2011 14:15:42 +0100
 
 rootskel (1.95) unstable; urgency=low
 
