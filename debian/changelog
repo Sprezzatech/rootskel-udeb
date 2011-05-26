@@ -12,6 +12,9 @@ rootskel (1.96~0) UNRELEASED; urgency=low
         S80anna-install-armel
         S99signal-status  
 
+  [ Colin Watson ]
+  * Set up /run on Linux, otherwise udev complains at boot.
+
  -- Hector Oron <zumbi@debian.org>  Thu, 21 Apr 2011 14:12:35 +0100
 
 rootskel (1.95) unstable; urgency=low

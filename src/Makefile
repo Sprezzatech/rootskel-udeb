@@ -19,6 +19,9 @@ subdirs_empty = \
 ifeq ($(DEB_HOST_ARCH_OS),linux)
   files_exec = \
 	init
+
+  subdirs_empty += \
+	run
 endif
 
 include ../Makefile.inc

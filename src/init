@@ -4,6 +4,7 @@ export PATH
 . /lib/debian-installer/init-debug
 debugshell "just booted"
 
+mount /run
 mount /proc
 mount /sys
 /lib/debian-installer/start-udev
