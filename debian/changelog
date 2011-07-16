@@ -1,3 +1,10 @@
+rootskel (1.97) UNRELEASED; urgency=low
+
+  [ Robert Millan ]
+  * control: Use "any" architecture wildcards where possible.
+
+ -- Robert Millan <rmh@debian.org>  Sat, 16 Jul 2011 11:14:49 +0200
+
 rootskel (1.96) unstable; urgency=low
 
   [ Samuel Thibault ]
