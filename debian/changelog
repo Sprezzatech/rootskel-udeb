@@ -3,6 +3,11 @@ rootskel (1.97) UNRELEASED; urgency=low
   [ Robert Millan ]
   * control: Use "any" architecture wildcards where possible.
 
+  [ Colin Watson ]
+  * Provide the ability to choose a remote logging host and port if
+    specified on the kernel command line using log_host= and log_port=
+    (thanks, Matt T. Proud; closes: #635191).
+
  -- Robert Millan <rmh@debian.org>  Sat, 16 Jul 2011 11:14:49 +0200
 
 rootskel (1.96) unstable; urgency=low
