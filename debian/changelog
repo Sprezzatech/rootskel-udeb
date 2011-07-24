@@ -8,6 +8,10 @@ rootskel (1.97) UNRELEASED; urgency=low
     specified on the kernel command line using log_host= and log_port=
     (thanks, Matt T. Proud; closes: #635191).
 
+  [ Samuel Thibault ]
+  * Harmonize S40term-hurd with linux & kfreebsd, fixes glitch in
+    network-console.
+
  -- Robert Millan <rmh@debian.org>  Sat, 16 Jul 2011 11:14:49 +0200
 
 rootskel (1.96) unstable; urgency=low
