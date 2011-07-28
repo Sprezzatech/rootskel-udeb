@@ -1,4 +1,4 @@
-rootskel (1.97) UNRELEASED; urgency=low
+rootskel (1.97) unstable; urgency=low
 
   [ Loïc Minier ]
   * Add Freescale i.MX serial consoles, /dev/ttymxc*.
@@ -15,7 +15,7 @@ rootskel (1.97) UNRELEASED; urgency=low
   * Harmonize S40term-hurd with linux & kfreebsd, fixes glitch in
     network-console.
 
- -- Robert Millan <rmh@debian.org>  Sat, 16 Jul 2011 11:14:49 +0200
+ -- Colin Watson <cjwatson@debian.org>  Thu, 28 Jul 2011 17:58:08 +0100
 
 rootskel (1.96) unstable; urgency=low
 
