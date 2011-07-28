@@ -1,5 +1,8 @@
 rootskel (1.97) UNRELEASED; urgency=low
 
+  [ Loïc Minier ]
+  * Add Freescale i.MX serial consoles, /dev/ttymxc*.
+
   [ Robert Millan ]
   * control: Use "any" architecture wildcards where possible.
 
