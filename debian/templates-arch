@@ -9,6 +9,7 @@ Template: debian-installer/exit/always_halt
 Type: boolean
 Default: false
 Default[s390]: true
+Default[s390x]: true
 Description: for internal use only
  Always halt the machine
 

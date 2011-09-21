@@ -22,7 +22,7 @@ files_exec = \
 	exit-command \
 	menu
 
-ifeq ($(DEB_HOST_ARCH),s390)
+ifeq (,$(findstring :$(ARCH):,:s390:s390x:))
   files += \
 	detect-console:detect-console-linux-s390
 else

@@ -26,8 +26,17 @@ ifeq ($(DEB_HOST_ARCH_CPU),sparc)
 	S34framebuffer-linux-sparc
 endif
 
+
 ifeq ($(DEB_HOST_ARCH_OS),linux)
-  ifneq ($(DEB_HOST_ARCH_CPU),s390)
+  FRAMEBUFFER = 1
+  ifeq ($(DEB_HOST_ARCH_CPU),s390)
+    FRAMEBUFFER = 0
+  endif
+  ifeq ($(DEB_HOST_ARCH_CPU),s390x)
+    FRAMEBUFFER = 0
+  endif
+
+  ifneq ($(FRAMEBUFFER),0)
     files += \
 	S35framebuffer-linux
   endif
