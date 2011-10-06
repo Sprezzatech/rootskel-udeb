@@ -1,8 +1,8 @@
-rootskel (1.98) UNRELEASED; urgency=low
+rootskel (1.98) unstable; urgency=low
 
   * Add support for s390x.
 
- -- Philipp Kern <pkern@debian.org>  Wed, 21 Sep 2011 23:13:53 +0200
+ -- Philipp Kern <pkern@debian.org>  Thu, 06 Oct 2011 18:58:30 +0200
 
 rootskel (1.97) unstable; urgency=low
 
