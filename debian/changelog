@@ -1,6 +1,6 @@
 rootskel (1.99) UNRELEASED; urgency=low
 
-  * Serial devices are now named "cuau" on GNU/kFreeBSD.
+  * Serial devices are now named "ttyu" and "cuau" on GNU/kFreeBSD.
 
  -- Robert Millan <rmh@debian.org>  Wed, 02 Nov 2011 12:44:22 +0100
 
