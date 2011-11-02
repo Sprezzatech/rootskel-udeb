@@ -18,7 +18,7 @@ if ! [ -f /var/run/console-device ]; then
 	for c in $consoles ; do
 		case $c in
 			# Serial devices
-			ttyd*)
+			cuau*)
 				console="$c"
 				break
 				;;
