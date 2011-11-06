@@ -1,6 +1,6 @@
 if [ -z "$TERM_TYPE" ]; then
 	case $(readlink /proc/self/fd/0) in
-	    /dev/console|/dev/tty[A-Z]*)
+	    /dev/console|/dev/tty[A-Z]*|/dev/sclp*)
 		TERM_TYPE=serial
 		;;
 	    /dev/pts/*)

@@ -1,6 +1,10 @@
 rootskel (1.99) UNRELEASED; urgency=low
 
+  [ Robert Millan ]
   * Serial devices are now named "ttyu" and "cuau" on GNU/kFreeBSD.
+
+  [ Aurelien Jarno ]
+  * On s390x, detect /dev/sclp* as serial devices.
 
  -- Robert Millan <rmh@debian.org>  Wed, 02 Nov 2011 12:44:22 +0100
 
