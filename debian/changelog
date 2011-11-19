@@ -6,6 +6,9 @@ rootskel (1.99) UNRELEASED; urgency=low
   [ Aurelien Jarno ]
   * On s390x, detect /dev/sclp* as serial devices.
 
+  [ Otavio Salvador ]
+  * kfreebsd: set TERM as xterm by default.
+
  -- Robert Millan <rmh@debian.org>  Wed, 02 Nov 2011 12:44:22 +0100
 
 rootskel (1.98) unstable; urgency=low

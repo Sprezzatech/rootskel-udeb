@@ -13,7 +13,7 @@ if [ -z "$TERM_TYPE" ]; then
 fi
 
 if [ -z "$TERM" ] ; then
-	TERM=cons25
+	TERM=xterm
 fi
 
 export TERM
