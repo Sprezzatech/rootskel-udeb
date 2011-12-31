@@ -1,4 +1,4 @@
-rootskel (1.99) UNRELEASED; urgency=low
+rootskel (1.99) unstable; urgency=low
 
   [ Robert Millan ]
   * Serial devices are now named "ttyu" and "cuau" on GNU/kFreeBSD.
@@ -9,7 +9,7 @@ rootskel (1.99) UNRELEASED; urgency=low
   [ Otavio Salvador ]
   * kfreebsd: set TERM as xterm by default.
 
- -- Robert Millan <rmh@debian.org>  Wed, 02 Nov 2011 12:44:22 +0100
+ -- Otavio Salvador <otavio@debian.org>  Sat, 31 Dec 2011 10:58:23 -0200
 
 rootskel (1.98) unstable; urgency=low
 
