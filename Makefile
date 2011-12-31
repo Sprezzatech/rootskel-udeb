@@ -8,18 +8,10 @@ endif
 subdirs = \
 	src
 
-ifeq ($(DEB_HOST_ARCH_OS),linux)
-subdirs += \
-	src-bootfloppy
-endif
-
 build: build-recursive
 
 install:
 	@$(MAKE) install -C src DESTDIR=$(CURDIR)/debian/rootskel/
-ifeq ($(DEB_HOST_ARCH_OS),linux)
-	@$(MAKE) install -C src-bootfloppy DESTDIR=$(CURDIR)/debian/rootskel-bootfloppy/
-endif
 
 clean: clean-recursive
 

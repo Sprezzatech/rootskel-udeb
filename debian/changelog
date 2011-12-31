@@ -1,3 +1,10 @@
+rootskel (1.100) UNRELEASED; urgency=low
+
+  * Remove rootskel-bootfloppy. The age of the floppy is officially over.
+    Closes: #653840
+
+ -- Joey Hess <joeyh@debian.org>  Sat, 31 Dec 2011 12:34:05 -0400
+
 rootskel (1.99) unstable; urgency=low
 
   [ Robert Millan ]
