@@ -10,5 +10,5 @@ Vcs-Git: git://git.debian.org/d-i/rootskel.git
 Package: rootskel
 XC-Package-Type: udeb
 Architecture: any
-Depends: di-utils (>= 1.66), udev-udeb (>= 0.125-6) [linux-any], freebsd-utils-udeb [kfreebsd-any], ${misc:Depends}
+Depends: di-utils (>= 1.66), udev-udeb (>= 0.125-6) [linux-any] | devd-udeb [kfreebsd-any], freebsd-utils-udeb [kfreebsd-any], ${misc:Depends}
 Description: Skeleton root filesystem used by debian-installer

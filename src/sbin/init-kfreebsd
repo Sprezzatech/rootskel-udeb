@@ -40,6 +40,9 @@ for i in $envvars ; do
     esac
 done
 
+# Start devd to process all pending events before init (see #493865)
+devd
+
 # Close all open files on the initrd, export kernel parameters and run
 # busybox init
 debugshell "before init"
