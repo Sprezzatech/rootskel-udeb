@@ -8,6 +8,11 @@ rootskel (1.100) UNRELEASED; urgency=low
   * src/sbin/init-kfreebsd: Start devd to process all pending events
     before init (see #493865)
 
+  [ Julien Cristau ]
+  * Generate debian/templates in build-arch as well as build, so they don't go
+    missing on non-source uploads.  Thanks to Cyril Brulebois for the
+    investigation.
+
  -- Robert Millan <rmh@debian.org>  Sun, 18 Mar 2012 13:42:24 +0100
 
 rootskel (1.99) unstable; urgency=low
