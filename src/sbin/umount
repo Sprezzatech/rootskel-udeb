@@ -1,0 +1,40 @@
+#!/bin/sh
+options=
+while true
+do
+	case "$1" in
+		-f)
+			options="$options -f"
+			shift
+			;;
+		-l)
+			exit 1
+			;;
+		-d)
+			exit 1
+			;;
+		-n)
+			shift
+			;;
+		-r)
+			exit 1
+			;;
+		-a)
+			exit 0
+			;;
+		-v|-d|-i)
+			shift
+			;;
+		-t)
+			shift
+			shift
+			;;
+		*)
+			break
+	esac
+done
+while [ "$#" -gt 0 ]
+do
+	settrans -gap $options "$1"
+	shift
+done

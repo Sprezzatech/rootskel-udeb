@@ -17,6 +17,11 @@ ifeq ($(DEB_HOST_ARCH_OS),linux)
 	get-real-console-linux
 endif
 
+ifeq ($(DEB_HOST_ARCH_OS),hurd)
+  files_exec += \
+	umount
+endif
+
 console-type: console-type.c
 	gcc -Os -Wall console-type.c -o console-type
 
