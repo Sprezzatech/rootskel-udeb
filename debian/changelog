@@ -1,6 +1,7 @@
 rootskel (1.101) UNRELEASED; urgency=low
 
   * When enabling speakup, tell debconf to show choices horizontally.
+  * Update lowmem limit for graphical installer.
 
  -- Samuel Thibault <sthibault@debian.org>  Sat, 15 Sep 2012 01:35:19 +0200
 
