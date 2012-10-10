@@ -1,7 +1,6 @@
 dir = usr/share/sprezzatech
 
-files = \
-	sprezzos.key
+files = sprezzos.key \
 	sprezzos.png
 
 include ../../../../Makefile.inc
