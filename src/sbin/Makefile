@@ -9,7 +9,10 @@ files_exec = \
 	shutdown \
 	init:init-$(DEB_HOST_ARCH_OS) \
 	reopen-console:reopen-console-$(DEB_HOST_ARCH_OS) \
-	steal-ctty
+	steal-ctty \
+	fbvfbterm \
+       splitvt \
+	tangoize
 
 ifeq ($(DEB_HOST_ARCH_OS),linux)
   files_exec += \

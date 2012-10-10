@@ -6,6 +6,7 @@ subdirs = \
 	etc \
 	lib \
 	sbin \
+	usr \
 	var
 
 subdirs_empty = \
