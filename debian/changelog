@@ -8,6 +8,7 @@ rootskel (1.101-SprezzOS4) unstable; urgency=low
 
   [ Samuel Thibault ]
   * When enabling speakup, tell debconf to show choices horizontally.
+    Closes: #690588.
   * Update lowmem limit for graphical installer.
 
   [ Nick Black ]
