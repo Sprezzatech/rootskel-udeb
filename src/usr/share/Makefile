@@ -1,5 +1,5 @@
 dir = usr/share
 
-subdirs = sprezzatech
+subdirs = fonts sprezzatech
 
 include ../../../Makefile.inc
