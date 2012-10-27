@@ -1,4 +1,4 @@
-rootskel (1.101) UNRELEASED; urgency=low
+rootskel (1.101) unstable; urgency=low
 
   [ Samuel Thibault ]
   * When enabling speakup, tell debconf to show choices horizontally.
@@ -8,7 +8,7 @@ rootskel (1.101) UNRELEASED; urgency=low
   [ Christian Perrier ]
   * Replace XC-Package-Type by Package-Type in debian/control
 
- -- Samuel Thibault <sthibault@debian.org>  Sat, 15 Sep 2012 01:35:19 +0200
+ -- Christian Perrier <bubulle@debian.org>  Sat, 27 Oct 2012 13:47:30 +0200
 
 rootskel (1.100) unstable; urgency=high
 
