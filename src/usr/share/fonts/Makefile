@@ -1,6 +1,5 @@
 dir = usr/share/fonts
 
-files = terminusbold436.otf \
-	TerminusBold-4.36.ttf
+files = terminusbold436.otf
 
 include ../../../../Makefile.inc
