@@ -10,7 +10,7 @@ rootskel (1.101-SprezzOS5) unstable; urgency=low
 
  -- nick black <nick.black@sprezzatech.com>  Wed, 10 Oct 2012 08:57:26 -0400
 
-rootskel (1.101-SprezzOS4) unstable; urgency=low
+rootskel (1.101) unstable; urgency=low
 
   [ Samuel Thibault ]
   * When enabling speakup, tell debconf to show choices horizontally.
@@ -21,7 +21,10 @@ rootskel (1.101-SprezzOS4) unstable; urgency=low
   * SprezzOS build
   * Take stderr from fbvfbterm to /var/log/syslog
 
- -- Nick Black <nick.black@sprezzatech.com>  Wed, 26 Sep 2012 21:24:00 +0000
+  [ Christian Perrier ]
+  * Replace XC-Package-Type by Package-Type in debian/control
+
+ -- Christian Perrier <bubulle@debian.org>  Sat, 27 Oct 2012 13:47:30 +0200
 
 rootskel (1.100) unstable; urgency=high
 
