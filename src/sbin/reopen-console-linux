@@ -71,4 +71,12 @@ if ! [ -f /var/run/console-device ]; then
 fi
 
 # Some other session may have it as ctty. Steal it from them
-exec /sbin/steal-ctty $(cat /var/run/console-device) "$@"
+if [ -r /var/run/console-device ] ; then
+	exec /sbin/steal-ctty $(cat /var/run/console-device) "$@"
+elif [ -r /dev/console ] ; then
+	exec /sbin/steal-ctty /dev/console "$@"
+elif [ tty > /dev/null ] ; then
+	exec /sbin/steal-ctty `tty` "$@"
+else
+	exec /sbin/steal-ctty /dev/tty0 "$@"
+fi

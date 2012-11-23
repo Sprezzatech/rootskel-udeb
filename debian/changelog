@@ -1,3 +1,9 @@
+rootskel (1.101-SprezzOS7) unstable; urgency=low
+
+  * Play hijinks when launching steal-ctty
+
+ -- nick black <nick.black@sprezzatech.com>  Fri, 23 Nov 2012 13:30:25 -0500
+
 rootskel (1.101-SprezzOS6) unstable; urgency=low
 
   * Rebuild with old fbterm fonts
