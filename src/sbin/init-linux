@@ -23,6 +23,14 @@ mkdir -p /proc
 mount /proc
 mkdir -p /sys
 mount /sys
+
+# kill off the || true's once this is tested FIXME
+/etc/init.d/udev start || true
+mknod -m 666 /dev/tty c 5 0 || true
+mknod -m 640 /dev/tty1 c 4 1 || true
+mknod -m 666 /dev/vcs c 7 0 || true
+mknod -m 660 /dev/vcs1 c 7 1 || true
+# end experiment
 /lib/debian-installer/start-udev
 
 # Close all open files on the initrd, and run busybox init.
