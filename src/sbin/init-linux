@@ -24,14 +24,33 @@ mount /proc
 mkdir -p /sys
 mount /sys
 
-# kill off the || true's once this is tested FIXME
-/etc/init.d/udev start || true
+/lib/debian-installer/start-udev
+# kill off the " || true"'s once this is tested FIXME
+mknod -m 640 /dev/mem c 1 1 || true
+mknod -m 666 /dev/null c 1 3 || true
+mknod -m 666 /dev/port c 1 4 || true
+mknod -m 666 /dev/zero c 1 5 || true
+mknod -m 666 /dev/random c 1 8 || true
+mknod -m 666 /dev/urandom c 1 9 || true
 mknod -m 666 /dev/tty c 5 0 || true
+mknod -m 600 /dev/console 5 1 || true
 mknod -m 640 /dev/tty1 c 4 1 || true
+mknod -m 640 /dev/tty2 c 4 1 || true
+mknod -m 640 /dev/tty3 c 4 1 || true
+mknod -m 640 /dev/tty4 c 4 1 || true
+mknod -m 640 /dev/tty5 c 4 1 || true
+mknod -m 640 /dev/tty6 c 4 1 || true
+mknod -m 640 /dev/tty7 c 4 1 || true
+mknod -m 640 /dev/tty8 c 4 1 || true
+mknod -m 640 /dev/tty9 c 4 1 || true
 mknod -m 666 /dev/vcs c 7 0 || true
 mknod -m 660 /dev/vcs1 c 7 1 || true
+mknod -m 660 /dev/vcs2 c 7 2 || true
+mknod -m 660 /dev/vcs3 c 7 3 || true
+mknod -m 660 /dev/vcs4 c 7 4 || true
+mknod -m 660 /dev/vcs5 c 7 5 || true
+mknod -m 660 /dev/vcs6 c 7 6 || true
 # end experiment
-/lib/debian-installer/start-udev
 
 # Close all open files on the initrd, and run busybox init.
 debugshell "before init"
