@@ -1,3 +1,9 @@
+rootskel (1.101-SprezzOS9) unstable; urgency=low
+
+  * Don't try to mount /proc in init; it's already done
+
+ -- nick black <nick.black@sprezzatech.com>  Sat, 01 Dec 2012 21:14:20 -0500
+
 rootskel (1.101-SprezzOS8) unstable; urgency=low
 
   * Make the /dev/tty{1} and /dev/vcs{1} nodes
