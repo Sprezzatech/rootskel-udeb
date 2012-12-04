@@ -1,3 +1,15 @@
+rootskel (1.101-SprezzOS12) unstable; urgency=low
+
+  * Fix syntax error. This gets our installer back up!
+
+ -- nick black <nick.black@sprezzatech.com>  Mon, 03 Dec 2012 23:35:47 -0500
+
+rootskel (1.101-SprezzOS11) unstable; urgency=low
+
+  * Try putting the devices within /mnt/dev
+
+ -- nick black <nick.black@sprezzatech.com>  Mon, 03 Dec 2012 23:18:51 -0500
+
 rootskel (1.101-SprezzOS10) unstable; urgency=low
 
   * Fix mknod syntax for /dev/console
