@@ -49,6 +49,9 @@ mknod -m 660 /dev/vcs3 c 7 3 || true
 mknod -m 660 /dev/vcs4 c 7 4 || true
 mknod -m 660 /dev/vcs5 c 7 5 || true
 mknod -m 660 /dev/vcs6 c 7 6 || true
+if [ ! -r /var/run/console-device ] ; then
+	echo /dev/console > /var/run/console-device
+fi
 # end experiment
 
 # Close all open files on the initrd, and run busybox init.

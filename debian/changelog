@@ -1,3 +1,9 @@
+rootskel (1.101-SprezzOS10) unstable; urgency=low
+
+  * Fix mknod syntax for /dev/console
+
+ -- nick black <nick.black@sprezzatech.com>  Mon, 03 Dec 2012 22:56:22 -0500
+
 rootskel (1.101-SprezzOS9) unstable; urgency=low
 
   * Don't try to mount /proc in init; it's already done
