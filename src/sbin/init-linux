@@ -26,6 +26,7 @@ mount /sys
 #/lib/debian-installer/start-udev launched by /init
 # kill off the " || true"'s once this is tested FIXME
 for i in /dev /mnt/dev ; do
+	mkdir -p $i
 	mknod -m 640 $i/mem c 1 1 || true
 	mknod -m 666 $i/null c 1 3 || true
 	mknod -m 666 $i/port c 1 4 || true
@@ -51,9 +52,11 @@ for i in /dev /mnt/dev ; do
 	mknod -m 660 $i/vcs5 c 7 5 || true
 	mknod -m 660 $i/vcs6 c 7 6 || true
 done
+mkdir -p /var/run/console-device
 if [ ! -r /var/run/console-device ] ; then
 	echo /dev/console > /var/run/console-device
 fi
+mkdir -p /mnt/var/run/console-device
 if [ ! -r /mnt/var/run/console-device ] ; then
 	echo /dev/console > /mnt/var/run/console-device
 fi

@@ -1,17 +1,17 @@
 #!/bin/sh -e
 # used for initramfs
-export PATH
+export PATH=$PATH:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
 . /lib/debian-installer/init-debug
 debugshell "just booted"
 
+mkdir -p /run
 mount /run
-mkdir -p /run/lock
+mkdir -p /run/lock /proc /sys
 mount /proc
 mount /sys
 #echo "Running start-udev..."
 #/lib/debian-installer/start-udev
 echo "Running /sbin/init..."
-exec /sbin/init
 
 init='/bin/busybox init'
 for i in $(cat /proc/cmdline); do
