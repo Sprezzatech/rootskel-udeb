@@ -8,7 +8,10 @@ mount /run
 mkdir -p /run/lock
 mount /proc
 mount /sys
-/lib/debian-installer/start-udev
+#echo "Running start-udev..."
+#/lib/debian-installer/start-udev
+echo "Running /sbin/init..."
+/sbin/init
 
 init='/bin/busybox init'
 for i in $(cat /proc/cmdline); do

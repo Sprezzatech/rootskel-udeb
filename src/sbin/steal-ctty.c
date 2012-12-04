@@ -18,17 +18,17 @@ int main(int argc, char ** argv)
 {
     int fd;
 
-    if (-1 == (fd = open(argv[1], O_RDWR))) {
-        perror("steal-ctty");
-        return 1;
+    if((fd = open(argv[1], O_RDWR)) >= 0){
+	dup2(fd, 0);
+	dup2(fd, 1);
+	dup2(fd, 2);
+	while (fd > 2) {
+		close(fd--);
+	}
+	ioctl(0, TIOCSCTTY, (char *) 1);
+    }else{
+	perror(argv[1]);
     }
-    dup2(fd, 0);
-    dup2(fd, 1);
-    dup2(fd, 2);
-    while (fd > 2) {
-        close(fd--);
-    }
-    ioctl(0, TIOCSCTTY, (char *) 1);
     execvp(argv[2], &argv[2]);
     /* never reached. */
     return 0;
