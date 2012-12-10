@@ -6,6 +6,24 @@ if [ -n $LANG ] ; then
 	export LANG=C.UTF-8
 fi
 
+if [ -z "$LOG" ] ; then
+	export LOG=/var/log/syslog
+fi
+
+if [ -z "$FRAMEBUFFER" ] ; then
+	# /dev/fd/0 also apparently occurs in some udev rulesets...
+	export FRAMEBUFFER=/dev/fb0
+fi
+
+if [ ! -w "$FRAMEBUFFER" ] ; then
+	if [ ! -e "$FRAMEBUFFER" ] ; then
+		echo "$FRAMEBUFFER doesn't exist" >&2
+	else
+		echo "Can't write to $FRAMEBUFFER" >&2
+	fi
+	exec "$@" 2>> "$LOG"
+fi
+
 export FSIZE="18"
 export FHEIGHT="18"
 export FWIDTH="10"
@@ -20,4 +38,4 @@ export FBTERM_BACKGROUND_IMAGE=1
 
 exec fbterm -n "$FONT" -s "$FSIZE" --font-height="$FHEIGHT" \
 	--font-width="$FWIDTH" -- \
-	/sbin/tangoize env LANG=$LANG TERM=fbterm "$@" 2>> /var/log/syslog
+	/sbin/tangoize env LANG=$LANG TERM=fbterm "$@" 2>> "$LOG"
