@@ -1,4 +1,4 @@
-rootskel (1.102) UNRELEASED; urgency=low
+rootskel (1.102) unstable; urgency=low
 
   * Fix /etc/profile script to properly detect when to call setupcon:
     the config script for console-setup-udeb is /etc/default/keyboard
@@ -11,7 +11,7 @@ rootskel (1.102) UNRELEASED; urgency=low
     case of troubles, it's easy enough to get rid of the redirections
     to debug things.
 
- -- Cyril Brulebois <kibi@debian.org>  Thu, 27 Dec 2012 22:26:30 +0100
+ -- Cyril Brulebois <kibi@debian.org>  Thu, 27 Dec 2012 22:40:16 +0100
 
 rootskel (1.101) unstable; urgency=low
 
