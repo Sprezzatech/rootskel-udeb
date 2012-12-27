@@ -6,5 +6,5 @@ fi
 
 # Set up the console if console-setup-udeb is installed
 if type setupcon >/dev/null 2>&1 && [ -f /etc/default/keyboard ]; then
-	setupcon || true
+	setupcon >/dev/null 2>&1 || true
 fi

@@ -5,6 +5,11 @@ rootskel (1.102) UNRELEASED; urgency=low
     (middle-ground between console-setup's /etc/default/console-setup
     and keyboard-configuration's /etc/default/keyboard).
     Closes: #606395.
+  * Redirect setupcon's stdout/stderr to /dev/null in that profile
+    script. This avoids spurious “gzip is not accessible. Will not
+    save cached keyboard map.” messages when opening a console. In
+    case of troubles, it's easy enough to get rid of the redirections
+    to debug things.
 
  -- Cyril Brulebois <kibi@debian.org>  Thu, 27 Dec 2012 22:26:30 +0100
 
