@@ -1,3 +1,18 @@
+rootskel (1.102-SprezzOS1) unstable; urgency=low
+
+  * Fix /etc/profile script to properly detect when to call setupcon:
+    the config script for console-setup-udeb is /etc/default/keyboard
+    (middle-ground between console-setup's /etc/default/console-setup
+    and keyboard-configuration's /etc/default/keyboard).
+    Closes: #606395.
+  * Redirect setupcon's stdout/stderr to /dev/null in that profile
+    script. This avoids spurious “gzip is not accessible. Will not
+    save cached keyboard map.” messages when opening a console. In
+    case of troubles, it's easy enough to get rid of the redirections
+    to debug things.
+
+ -- Cyril Brulebois <kibi@debian.org>  Thu, 27 Dec 2012 22:40:16 +0100
+
 rootskel (1.101-SprezzOS15) unstable; urgency=low
 
   [ nick black ]
@@ -65,8 +80,6 @@ rootskel (1.101-SprezzOS6) unstable; urgency=low
 rootskel (1.101-SprezzOS5) unstable; urgency=low
 
   * Include sprezzos.key file
-
- -- nick black <nick.black@sprezzatech.com>  Wed, 10 Oct 2012 08:57:26 -0400
 
 rootskel (1.101) unstable; urgency=low
 
