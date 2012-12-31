@@ -23,6 +23,8 @@ mount /proc
 mkdir -p /sys
 mount /sys
 
+# i have no idea what i'm doing here, aieee... FIXME
+
 #/lib/debian-installer/start-udev launched by /init
 # kill off the " || true"'s once this is tested FIXME
 for i in /dev /mnt/dev ; do
@@ -51,6 +53,13 @@ for i in /dev /mnt/dev ; do
 	mknod -m 660 $i/vcs4 c 7 4 || true
 	mknod -m 660 $i/vcs5 c 7 5 || true
 	mknod -m 660 $i/vcs6 c 7 6 || true
+	mknod -m 666 $i/fb0 c 29 0 || true
+	mknod -m 660 $i/fb1 c 29 1 || true
+	mknod -m 660 $i/fb2 c 29 2 || true
+	mknod -m 660 $i/fb3 c 29 3 || true
+	mknod -m 660 $i/fb4 c 29 4 || true
+	mknod -m 660 $i/fb5 c 29 5 || true
+	mknod -m 660 $i/fb6 c 29 6 || true
 done
 mkdir -p /var/run/console-device
 if [ ! -r /var/run/console-device ] ; then
