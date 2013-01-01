@@ -21,6 +21,7 @@ if [ ! -w "$FRAMEBUFFER" ] ; then
 	else
 		echo "Can't write to $FRAMEBUFFER" >&2
 	fi
+	shift
 	exec "$@" 2>> "$LOG"
 fi
 
