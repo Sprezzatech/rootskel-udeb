@@ -22,7 +22,7 @@ if [ ! -w "$FRAMEBUFFER" ] ; then
 		echo "Can't write to $FRAMEBUFFER" >&2
 	fi
 	shift
-	exec "$@" 2>> "$LOG"
+	exec /sbin/tangoize env LANG=$LANG "$@" 2>> "$LOG"
 fi
 
 export FSIZE="18"
