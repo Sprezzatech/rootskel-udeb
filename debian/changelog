@@ -1,3 +1,9 @@
+rootskel (1.102-SprezzOS3) unstable; urgency=low
+
+  * Remove failed /dev experiments
+
+ -- Nick Black <nick.black@sprezzatech.com>  Sun, 13 Jan 2013 08:13:32 -0500
+
 rootskel (1.102-SprezzOS2) unstable; urgency=low
 
   * Make framebuffer devices in rootskel init

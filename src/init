@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/sh
 # used for initramfs
 export PATH=$PATH:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
 . /lib/debian-installer/init-debug
@@ -9,9 +9,21 @@ mount /run
 mkdir -p /run/lock /proc /sys
 mount /proc
 mount /sys
-#echo "Running start-udev..."
-#/lib/debian-installer/start-udev
-echo "Running /sbin/init..."
+echo "Running start-udev..."
+/lib/debian-installer/start-udev
+
+for i in `seq 0 7` ; do
+	[ -e dev/fb$i ] || mknod -m 666 dev/fb$i c 29 $i
+	[ -e dev/sr$i ] || mknod -m 660 dev/sr$i b 11 $i
+	[ -e dev/vcs$i ] || mknod -m 660 dev/vcs$i c 7 $i
+	[ -e dev/tty$i ] || mknod -m 666 dev/tty$i c 4 $i
+done
+[ -e dev/vcs ] || mknod -m 660 dev/vcs c 7 0
+[ -e dev/tty0 ] || mknod -m 666 dev/tty0 c 4 0
+[ -e dev/tty ] || mknod -m 666 dev/tty c 5 0
+[ -e dev/console ] || mknod -m 600 dev/console c 5 1
+[ -e dev/ptmx ] || mknod -m 666 dev/ptmx c 5 2
+
 
 init='/bin/busybox init'
 for i in $(cat /proc/cmdline); do
@@ -25,5 +37,7 @@ for i in $(cat /proc/cmdline); do
 			sed -i '/^tty[23]/s/^/#/' /etc/inittab ;;
 	esac
 done
-debugshell "before init"
+
+
+echo "execing $init..."
 exec $init
