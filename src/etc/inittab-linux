@@ -3,19 +3,21 @@
 
 # main rc script
 ::sysinit:/sbin/reopen-console /sbin/fbvfbterm /usr/share/sprezzatech/sprezzos.png /sbin/debian-installer-startup
+#::sysinit:/sbin/reopen-console /sbin/debian-installer-startup
 
 # main setup program
-::respawn:/sbin/reopen-console /sbin/fbvfbterm /usr/share/sprezzatech/sprezzos.png /sbin/debian-installer
+#::respawn:/sbin/reopen-console /sbin/fbvfbterm /usr/share/sprezzatech/sprezzos.png /sbin/debian-installer
+::respawn:/sbin/reopen-console /sbin/debian-installer
 
 # convenience shells
-#tty2::respawn:/sbin/fbvfbterm /usr/share/sprezzatech/sprezzos.png /bin/sh
-#tty3::respawn:/sbin/fbvfbterm /usr/share/sprezzatech/sprezzos.png /bin/sh
-tty2::respawn:/bin/sh
-tty3::respawn:/bin/sh
+tty2::respawn:/sbin/fbvfbterm /usr/share/sprezzatech/sprezzos.png /bin/sh
+tty3::respawn:/sbin/fbvfbterm /usr/share/sprezzatech/sprezzos.png /bin/sh
+#tty2::respawn:/bin/sh
+#tty3::respawn:/bin/sh
 
 # logging
-#tty4::respawn:/sbin/fbvfbterm /usr/share/sprezzatech/sprezzos.png /usr/bin/tail -f /var/log/syslog
-tty4::respawn:/usr/bin/tail -f /var/log/syslog
+tty4::respawn:/sbin/fbvfbterm /usr/share/sprezzatech/sprezzos.png /usr/bin/tail -f /var/log/syslog
+#tty4::respawn:/usr/bin/tail -f /var/log/syslog
 
 tty5::askfirst:-/bin/sh
 tty6::respawn:/usr/bin/tail -f /var/log/syslog

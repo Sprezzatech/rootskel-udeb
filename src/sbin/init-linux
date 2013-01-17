@@ -6,8 +6,9 @@ debugshell "just booted"
 
 echo "Setting up filesystem, please wait ..."
 
+mount /proc
 umount initrd 2>/dev/null || true
-if mount -t tmpfs -o size=100M tmpfs /mnt ; then
+if mount -t tmpfs -o size=500M tmpfs /mnt ; then
 	:
 elif mount -t shm shm mnt; then
 	:
@@ -22,32 +23,6 @@ mkdir -p /proc
 mount /proc
 mkdir -p /sys
 mount /sys
-mkdir /dev/pts
-
-for i in `seq 0 7` ; do
-	[ -e /dev/fb$i ] || mknod -m 666 /dev/fb$i c 29 $i
-	[ -e /dev/sr$i ] || mknod -m 660 /dev/sr$i b 11 $i
-	[ -e /dev/vcs$i ] || mknod -m 660 /dev/vcs$i c 7 $i
-	[ -e /dev/tty$i ] || mknod -m 666 /dev/tty$i c 4 $i
-done
-[ -e /dev/vcs ] || mknod -m 660 /dev/vcs c 7 0
-[ -e /dev/tty0 ] || mknod -m 666 /dev/tty0 c 4 0
-[ -e /dev/tty ] || mknod -m 666 /dev/tty c 5 0
-[ -e /dev/console ] || mknod -m 600 /dev/console c 5 1
-[ -e /dev/ptmx ] || mknod -m 666 /dev/ptmx c 5 2
-[ -e /dev/mem ] || mknod -m 640 /dev/mem c 1 1
-[ -e /dev/null ] || mknod -m 666 /dev/null c 1 3
-[ -e /dev/port ] || mknod -m 666 /dev/port c 1 4
-[ -e /dev/zero ] || mknod -m 666 /dev/zero c 1 5
-
-mkdir -p /var/run
-if [ ! -r /var/run/console-device ] ; then
-	echo /dev/tty1 > /var/run/console-device
-fi
-
-
-/usr/lib/base-installer.d/05udev
-/usr/lib/base-installer.d/20console-setup
 
 # Close all open files on the initrd, and run busybox init.
 debugshell "before init"
