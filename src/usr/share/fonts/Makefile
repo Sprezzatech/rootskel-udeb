@@ -1,8 +1,7 @@
 dir = usr/share/fonts
 
-files = terminusbold436.otf \
-	Inconsolata.otf \
-	consola.otf \
-	unifont.ttf
+files = Terminus.ttf \
+	TerminusBold.ttf \
+	Inconsolata.otf
 
 include ../../../../Makefile.inc
