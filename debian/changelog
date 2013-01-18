@@ -1,3 +1,9 @@
+rootskel (1.102-SprezzOS5) unstable; urgency=low
+
+  * Use new installer background
+
+ -- Nick Black <nick.black@sprezzatech.com>  Fri, 18 Jan 2013 01:02:39 -0500
+
 rootskel (1.102-SprezzOS4) unstable; urgency=low
 
   * Cut it for 1.0.1
