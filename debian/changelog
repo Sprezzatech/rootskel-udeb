@@ -1,3 +1,10 @@
+rootskel (1.102-SprezzOS6) unstable; urgency=low
+
+  * Mount a devtmpfs in /dev
+  * Use askfirst on terminals 2 and 3
+
+ -- Nick Black <nick.black@sprezzatech.com>  Mon, 21 Jan 2013 17:47:55 -0500
+
 rootskel (1.102-SprezzOS5) unstable; urgency=low
 
   * Use new installer background

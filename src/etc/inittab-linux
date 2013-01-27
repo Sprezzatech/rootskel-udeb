@@ -10,8 +10,8 @@
 ::respawn:/sbin/reopen-console /sbin/debian-installer
 
 # convenience shells
-tty2::respawn:/sbin/fbvfbterm /usr/share/sprezzatech/sprezzos.png /bin/sh
-tty3::respawn:/sbin/fbvfbterm /usr/share/sprezzatech/sprezzos.png /bin/sh
+tty2::askfirst:/sbin/fbvfbterm /usr/share/sprezzatech/sprezzos.png /bin/sh
+tty3::askfirst:/sbin/fbvfbterm /usr/share/sprezzatech/sprezzos.png /bin/sh
 #tty2::respawn:/bin/sh
 #tty3::respawn:/bin/sh
 

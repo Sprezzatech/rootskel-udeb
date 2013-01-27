@@ -16,9 +16,11 @@ else
 	mount -t ramfs ramfs /mnt
 fi
 umount /proc
-cp -a $(ls -1 / | grep -v '\(lost+found\|mnt\|proc\)') /mnt
+cp -a $(ls -1 / | grep -v '^\(lost+found\|mnt\|proc\|sys\)') /mnt
 cd /mnt
 pivot_root . initrd
+mkdir -p /dev
+mount -t devtmpfs none /dev
 mkdir -p /proc
 mount /proc
 mkdir -p /sys

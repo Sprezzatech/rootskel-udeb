@@ -9,9 +9,8 @@ mount /run
 mkdir -p /run/lock /proc /sys
 mount /proc
 mount /sys
-/lib/debian-installer/start-udev
 
-init='/bin/busybox init'
+init='/sbin/init'
 for i in $(cat /proc/cmdline); do
 	case $i in
 		init=/init|init=init)
